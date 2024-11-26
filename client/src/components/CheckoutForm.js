@@ -29,7 +29,7 @@ const CheckoutForm = ({ cartItems, clearCart }) => {
     };
 
     try {
-      const res = await axios.post('/api/orders', orderData);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/orders`, orderData);
 
       // Display bank account number and order confirmation
       alert(
